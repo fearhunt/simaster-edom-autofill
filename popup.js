@@ -1,9 +1,8 @@
-function sleep(ms) {
+function sleep (ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-document.getElementById('btn-run').addEventListener("click", function(e) {
-  e.preventDefault();
 
+function autoFill() {
   let dosen = document.getElementsByClassName("btn btn-warning btn-xs xhr dest_subcontent-element").length;
 
   let sleep_value = document.getElementById('delay-input').value;
@@ -22,6 +21,22 @@ document.getElementById('btn-run').addEventListener("click", function(e) {
     
     await sleep(sleep_value);
   }
+}
+
+document.getElementById('btn-run').addEventListener("click", function(e) {
+  e.preventDefault();
+
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  }, function (tabs) {
+    chrome.tabs.executeScript(
+      tabs[0].id, {
+        // Run the function inside active tab
+        code: autoFill
+      }
+    );
+  });
 });
 
 
