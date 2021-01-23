@@ -1,8 +1,9 @@
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+document.getElementById('btn-run').addEventListener("click", function(e) {
+  e.preventDefault();
 
-function autoFillEvaluation() {
   let dosen = document.getElementsByClassName("btn btn-warning btn-xs xhr dest_subcontent-element").length;
 
   let sleep_value = document.getElementById('delay-input').value;
@@ -11,8 +12,8 @@ function autoFillEvaluation() {
     document.getElementsByClassName("btn btn-warning btn-xs xhr dest_subcontent-element")[i].click();
   
     await sleep(sleep_value);
-
     for (let j = 1; j <= 12; j++) {
+
       document.querySelectorAll("input[name='jawabanInstrumenPilihan[" + j + "]']")[0].click();
     }
   
@@ -21,7 +22,7 @@ function autoFillEvaluation() {
     
     await sleep(sleep_value);
   }
-}
+});
 
 
 // document.addEventListener("DOMContentLoaded", function () {

@@ -3,8 +3,6 @@
 <html lang="en">
 
 <head>
-  <script src="popup.js"></script>
-
   <style>
     #main {
       min-width: 200px;
@@ -45,13 +43,15 @@
       Pengisian sangat bergantung dengan koneksi internet. Apabila koneksi internet kurang memadai, silakan untuk menambahkan durasi delay di bawah (dalam satuan ms) dan jalankan ulang apabila terdapat penilaian yang terlewat.
     </p>
 
-    <form id="fill-form" onsubmit="autoFillEvaluation()">
+    <form id="fill-form">
       <label for="delay-input">Delay (dalam ms)</label> <br>
       <input id="delay-input" name="delay-input" placeholder="Durasi Delay">
   
-      <button id="btn-run" type="submit">Isi EDOM</button>
+      <button id="btn-run">Isi EDOM</button>
     </form>
   </div>
+
+  <script src="./popup.js"></script>
 </body>
 
 </html>
