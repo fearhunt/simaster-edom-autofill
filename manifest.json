@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Simaster Auto Fill",
+    "version": "1.3",
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+      }
+    },
+    "permissions": [
+      "tabs", "activeTab", "https://simaster.ugm.ac.id/akademik/mhs_evaluasi_dosen/*"
+    ]
+  }

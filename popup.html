@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <script src="popup.js"></script>
+
+  <style>
+    #main {
+      min-width: 200px;
+      background-color: #dededeab;
+      padding: 0.75rem 1rem;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0.25rem 0;
+    }
+
+    #btn-run {
+      margin-left: 5px;
+      cursor: pointer;
+      background-color: #292D3E;
+      border: 0;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      color: white;
+      transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    #btn-run:hover {
+      background-color: #464c66;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <p class="title">Instruksi Singkat</p>
+    <hr>
+    <p style="margin-bottom: 10px">
+      Ekstensi ini akan mengisi seluruh evaluasi dosen dengan nilai "Sangat Baik". Jalankan ekstensi saat membuka tab <strong>Evaluasi Dosen --> Semester</strong> sesuai ajaran. <br>
+      Pengisian sangat bergantung dengan koneksi internet. Apabila koneksi internet kurang memadai, silakan untuk menambahkan durasi delay di bawah (dalam satuan ms) dan jalankan ulang apabila terdapat penilaian yang terlewat.
+    </p>
+
+    <form id="fill-form" onsubmit="autoFillEvaluation()">
+      <label for="delay-input">Delay (dalam ms)</label> <br>
+      <input id="delay-input" name="delay-input" placeholder="Durasi Delay">
+  
+      <button id="btn-run" type="submit">Isi EDOM</button>
+    </form>
+  </div>
+</body>
+
+</html>
