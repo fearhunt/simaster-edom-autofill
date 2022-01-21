@@ -6,9 +6,10 @@
     "permissions": [
       "tabs", 
       "activeTab", 
+      "storage",
       "scripting"
     ],
-    "host_permissions": [ "<all_urls>" ],
+    "host_permissions": [ "https://simaster.ugm.ac.id/akademik/mhs_evaluasi_dosen/*" ],
     "action": {
         "default_title": "Simaster Auto Fill",
         "default_popup": "popup.html"

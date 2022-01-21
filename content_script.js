@@ -58,4 +58,8 @@ function autoEdom(rate, sleepTime) {
     href = generateHref();
 }
 
-autoEdom(1, 2000);
+chrome.storage.local.get([ "rate", "delay" ], function (items) {
+    autoEdom(items.rate, items.delay);
+    chrome.storage.local.remove("rate");
+    chrome.storage.local.remove("delay");
+});

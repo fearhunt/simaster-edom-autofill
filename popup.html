@@ -17,7 +17,7 @@
     }
 
     #btn-run {
-      margin-left: 5px;
+      margin-top: 10px;
       cursor: pointer;
       background-color: #292D3E;
       border: 0;
@@ -39,15 +39,30 @@
     <p class="title">Instruksi Singkat</p>
     <hr>
     <p style="margin-bottom: 10px">
-      Ekstensi ini akan mengisi seluruh evaluasi dosen dengan nilai "Sangat Baik". Jalankan ekstensi saat membuka tab <strong>Evaluasi Dosen --> Semester</strong> sesuai ajaran. <br>
-      Pengisian sangat bergantung dengan koneksi internet. Apabila koneksi internet kurang memadai, silakan untuk menambahkan durasi delay di bawah (dalam satuan ms) dan jalankan ulang apabila terdapat penilaian yang terlewat.
+      Ekstensi ini akan mengisi evaluasi dosen paling atas. <br>
+      <br>
+      Jalankan ekstensi saat membuka tab <strong>Perkuliahan --> Evaluasi Dosen --> Semester</strong> sesuai ajaran. <br>
+      <br>
+      Pengisian sangat bergantung dengan koneksi internet. Apabila koneksi internet kurang memadai, silakan untuk menambahkan durasi delay di bawah.
     </p>
 
     <form id="fill-form">
+      <label>Penilaian Dosen</label> <br>
+      <input type="radio" id="sb" name="rate-input" value="1" required="required">
+      <label for="sb">Sangat Baik</label> <br>
+      <input type="radio" id="b" name="rate-input" value="2">
+      <label for="b">Baik</label> <br>  
+      <input type="radio" id="c" name="rate-input" value="3">
+      <label for="c">Cukup</label> <br>
+      <input type="radio" id="k" name="rate-input" value="4">
+      <label for="k">Kurang</label> <br>
+
+      <br>
+
       <label for="delay-input">Delay (dalam ms)</label> <br>
-      <input id="delay-input" type="number" min="2000" name="delay-input" step="100">
+      <input id="delay-input" required type="number" min="2000" value="2000" name="delay-input" step="100">
   
-      <button id="btn-run">Isi EDOM</button>
+      <input id="btn-run" type="submit" value="Isi EDOM"></input>
     </form>
   </div>
 
