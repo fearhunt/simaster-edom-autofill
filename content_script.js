@@ -54,8 +54,6 @@ function autoEdom(rate, sleepTime) {
 
         iterator.iterateNext().click();
     }, sleepTime);
-
-    href = generateHref();
 }
 
 chrome.storage.local.get([ "rate", "delay" ], function (items) {
