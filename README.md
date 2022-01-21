@@ -7,7 +7,7 @@
 <img width="755" alt="Screen Shot 2022-01-21 at 22 46 53" src="https://user-images.githubusercontent.com/41560568/150559357-2d50f4d9-cab9-4de2-b58d-5c5e6e72a648.png">
 
 3. Klik *Developer Mode* lalu klik tab *Load Unpacked*. 
-
+<img width="175" alt="Screen Shot 2022-01-21 at 23 28 02" src="https://user-images.githubusercontent.com/41560568/150563675-7526e4ea-6c7f-42ab-ab13-ea6425a42376.png">
 <img width="398" alt="Screen Shot 2022-01-21 at 22 47 29" src="https://user-images.githubusercontent.com/41560568/150556892-0561ade1-86ca-472c-abd3-c75f9aa1490e.png">
 
 4. Pilih folder yang sudah ter-extract dari zip sebelumnya.
