@@ -1,17 +1,16 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Simaster Auto Fill",
+    "description": "Mengisi Evaluasi Dosen oleh Mahasiswa (EDOM) secara otomatis",
     "version": "1.3",
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icons/16.png",
-        "32": "icons/32.png",
-        "48": "icons/48.png",
-        "128": "icons/128.png"
-      }
-    },
     "permissions": [
-      "tabs", "activeTab", "https://simaster.ugm.ac.id/akademik/mhs_evaluasi_dosen/*"
-    ]
+      "tabs", 
+      "activeTab", 
+      "scripting"
+    ],
+    "host_permissions": [ "<all_urls>" ],
+    "action": {
+        "default_title": "Simaster Auto Fill",
+        "default_popup": "popup.html"
+    }
   }
